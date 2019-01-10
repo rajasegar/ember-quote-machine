@@ -1,0 +1,18 @@
+@import 'bootstrap.min.css';
+@import 'fonts.css';
+
+body {
+    font-family: 'Roboto', 'Baloo Bhai', 'Lobster', 'Pacifico', 'Kaushan Script', 'Merienda', cursive,  sans-serif;
+
+}
+
+#canvas-wrapper {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 1em;
+}
+
+#canvas-wrapper a {
+    display: block;
+    text-align: center;
+}

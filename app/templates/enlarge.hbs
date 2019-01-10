@@ -1,0 +1,7 @@
+<input
+  type="range"
+  class="form-control"
+  value={{fontSize}}
+  min="10" max="200"
+  oninput={{action (mut fontSize) value="target.value"}}/>
+{{large-canvas fg=fg bg=bg font=font quote=quote fontSize=fontSize}}

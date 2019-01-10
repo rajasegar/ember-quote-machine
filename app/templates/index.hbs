@@ -1,0 +1,36 @@
+<div class="row">
+<div class="col-md">
+    <div class="form-group">
+      <label>Palette:</label>
+      <select id="lstPalettes" class="form-control" onchange={{action "setTheme" value="target.value"}}>
+        {{#each palettes as |p|}}
+          <option value="{{p.colors}}">{{p.name}}</option>
+        {{/each}}
+      </select>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="form-group">
+      <label>Quote:</label>
+      {{textarea value=quote class="form-control" cols="60" rows="5"}}
+    </div>
+</div>
+<div class="col-md">
+    <div class="form-group">
+      <label>Font:</label>
+      <select id="lstFonts" class="form-control" onchange={{action "setFont" value="target.value"}}>
+        {{#each fonts as |f|}}
+          <option value="{{f}}">{{f}}</option>
+        {{/each}}
+      </select>
+    </div>
+</div>
+</div>
+  <div id="canvas-wrapper" class="row">
+    {{#each themes as |t|}}
+      <div class="flex-container">
+        {{canvas-thing fg=(get t '0') bg=(get t '1') font=font quote=quote}}
+        {{#link-to 'enlarge' (query-params fg=(get t '0') bg=(get t '1') font=font quote=quote) }}Enlarge{{/link-to}}
+      </div>
+    {{/each}}
+  </div>
