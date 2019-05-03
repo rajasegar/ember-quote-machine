@@ -3,9 +3,9 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'quote-machine',
+    modulePrefix: 'ember-quote-machine',
     environment,
-    rootURL: '/',
+    rootURL: '/ember-quote-machine',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
